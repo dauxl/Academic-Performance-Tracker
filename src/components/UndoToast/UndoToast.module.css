@@ -1,0 +1,40 @@
+.show {}
+
+.undoToast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 14px 18px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+
+    transition: 0.25s;
+    z-index: 9999;
+}
+
+.undoToast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.undoBtn {
+    border: none;
+    background: none;
+    color: var(--accent);
+    font-weight: 700;
+    cursor: pointer;
+}
